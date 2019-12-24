@@ -150,12 +150,6 @@ queue<D>::Advance(ptr &p)
 }
 
 template<class D>
-bool queue<D>::atLast(ptr &p)
-{
-	return (p == rear);
-}
-
-template<class D>
 D queue<D>::returnCur(ptr &p)
 {
 	return p->data;
