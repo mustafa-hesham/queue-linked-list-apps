@@ -33,7 +33,6 @@ class queue
 		Split(queue h, queue &h1, queue &h2);
 		atFirst(ptr &p);
 		Advance(ptr &p);
-		bool atLast(ptr &p);
 		D returnCur(ptr &p);
 		bool returnPtrNull(ptr &p);
 		
