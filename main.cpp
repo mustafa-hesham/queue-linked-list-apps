@@ -59,9 +59,6 @@ int main(int argc, char** argv) {
 	}
 	print("\n\n");
 	
-//	intptr nums = intNova;
-//	intptr numsOdd = intNova;
-//	intptr numsEven = intNova;
 	queue<int> nums;
 	queue<int> numsOdd;
 	queue<int> numsEven;
