@@ -59,22 +59,22 @@ D queue<D>::returnFront()
 }
 
 template <class D>
-queue<D>::dequeue()
+queue<D>::dequeue(D& d)
 {
 	if (queueIsEmpty())
 	{
 		printn("The queue is empty!")
+		
 	}
 	else if (!queueIsEmpty())
 	{
 		ptr temp;
 		temp = front;
-		D xt;
-		xt = temp->data;
+		d = temp->data;
 		front = front->next;
 		delete temp;
-		print(xt);
 	}
+	
 	count--;
 }
 
@@ -121,7 +121,6 @@ queue<D>::Split(queue h, queue &h1, queue &h2)
 	
 	while(!h.returnPtrNull(temp))
 	{
-	
 		if (h.returnCur(temp) % 2 != 0)
 		{	
 			h1.enqueue(h.returnCur(temp));	
@@ -159,4 +158,22 @@ template<class D>
 bool queue<D>::returnPtrNull(ptr &p)
 {
 	return (p == NULL);
+}
+
+template <class D>
+queue<D>::splitByValue(queue h, queue &h1, queue &h2)
+{
+	D xr;
+	while (!h.queueIsEmpty())
+	{
+		h.dequeue(xr);
+		if (xr % 2 != 0) 
+		{
+			h1.enqueue(xr);
+		}
+		else 
+		{
+			h2.enqueue(xr);
+		}
+	}
 }
