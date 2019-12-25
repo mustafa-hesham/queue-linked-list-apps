@@ -24,7 +24,7 @@ class queue
 		
 		queue();
 		enqueue(const D &d);
-		dequeue();
+		dequeue(D& d);
 		bool queueIsEmpty() const;
 		bool frontIsEmpty()const;
 		D returnFront();
@@ -35,6 +35,7 @@ class queue
 		Advance(ptr &p);
 		D returnCur(ptr &p);
 		bool returnPtrNull(ptr &p);
+		splitByValue(queue h, queue &h1, queue &h2);
 		
 	protected:
 };
