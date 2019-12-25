@@ -20,6 +20,8 @@ using namespace std;
 int main(int argc, char** argv) {
 	
 	intptr num = intNova;
+	int tr;
+	char tx;
 	
 	num->enqueue(2);
 	num->enqueue(0);
@@ -32,7 +34,8 @@ int main(int argc, char** argv) {
 	cout<<"\n\n\n";
 	while (!num->queueIsEmpty())
 	{
-		num->dequeue();
+		num->dequeue(tr);
+		print(tr);
 	}
 	
 	delete num;
@@ -54,7 +57,8 @@ int main(int argc, char** argv) {
 	name->enqueue('A');
 	while (!name->queueIsEmpty())
 	{
-		name->dequeue();
+		name->dequeue(tx);
+		print(tx);
 		print(name->pop());
 	}
 	print("\n\n");
@@ -74,19 +78,22 @@ int main(int argc, char** argv) {
 	cout<<"Odd numbers: "<<endl;
 	while (!numsOdd.queueIsEmpty())
 	{
-		numsOdd.dequeue();
+		numsOdd.dequeue(tr);
+		print(tr);
 	}
 	
 	cout<<"\n\nEven numbers: "<<endl;
 	while (!numsEven.queueIsEmpty())
 	{
-		numsEven.dequeue();
+		numsEven.dequeue(tr);
+		print(tr);
 	}
 	
 	cout<<"\n\nDequeuing the original queue: "<<endl;
 	while (!nums.queueIsEmpty())
 	{
-		nums.dequeue();
+		nums.dequeue(tr);
+		print(tr);
 	}
 	return 0;
 }
